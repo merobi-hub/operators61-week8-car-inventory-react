@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import { Home } from './components'
+import './styles.css';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Home title='Operators-61 Car Inventory' />
   </React.StrictMode>,
   document.getElementById('root')
 );
