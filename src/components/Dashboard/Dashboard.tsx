@@ -15,6 +15,7 @@ import { Drawer as MUIDrawer,
     Button,
     SvgIcon
 } from '@material-ui/core';
+import burger from '../../assets/images/icons8-menu.svg';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import MenuIcon from '@material-ui/core/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
@@ -142,7 +143,10 @@ export const Dashboard = withRouter(( props:DashProps ) => {
                 edge="start"
                 className={clsx(classes.menuButton, open && classes.hide)}
               >
-                <SvgIcon />
+                <SvgIcon>
+                  <path d="M 0 2 L 0 4 L 24 4 L 24 2 Z M 0 11 L 0 13 L 24 13 L 24 11 Z M 0 20 L 0 22 L 24 22 L 24 20 Z M 0 20 "/>
+                </SvgIcon>
+                
               </IconButton>
   
               <Button className={classes.toolbar_button}>Create New Car</Button>
