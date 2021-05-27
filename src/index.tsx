@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Home, Dashboard, SignIn } from './components'
-import './styles.css'
+import { Home, Dashboard, SignIn } from './components';
+import './styles.css';
 import reportWebVitals from './reportWebVitals';
 
 //import for react routing
