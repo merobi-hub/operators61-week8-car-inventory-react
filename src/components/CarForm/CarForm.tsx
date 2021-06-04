@@ -2,13 +2,13 @@ import React from 'react';
 import { useSelector, useDispatch, useStore } from 'react-redux';
 import { useForm } from 'react-hook-form';
 import { chooseName } from '../../redux/slices/rootSlice';
-import { Input } from '../sharedComponents';
+import { Input } from '../sharedComponents/Input';
 import { Button } from '@material-ui/core';
 
 import { server_calls } from '../../api';
 
 import { useGetData } from '../../custom-hooks';
-import { PinDropSharp } from '@material-ui/icons';
+// import { PinDropSharp } from '@material-ui/icons';
 
 
 interface CarFormProps {
@@ -28,7 +28,7 @@ export const CarForm = (props:CarFormProps) => {
     const name = useSelector<CarState>(state => state.name)
     const { register, handleSubmit } = useForm({ })
 
-    const onSubmit = (data: any, event: any) => {
+    const onSubmit = (data:any, event:any) => {
 
         if(props.id!){
             server_calls.update(props.id!, data)

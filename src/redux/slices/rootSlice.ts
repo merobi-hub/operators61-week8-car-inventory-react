@@ -15,8 +15,8 @@ const rootSlice = createSlice({
         interior: 'blue cloth'
     },
     reducers: {
-        chooseName: (state, action) => { state.name = action.payload},
-        chooseModel: (state, action) => { state.model = action.payload}
+        chooseName: (state, action) => { state.name = action.payload },
+        chooseModel: (state, action) => { state.model = action.payload }
     }
 })
 

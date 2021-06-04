@@ -11,22 +11,30 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { store } from './redux/store';
 
+//firebase auth imports
+import { FirebaseAppProvider, AuthCheck } from 'reactfire';
+import 'firebase/auth';
+import { firebaseConfig } from './firebaseConfig';
+
+
 ReactDOM.render(
   <React.StrictMode>
-    <Provider store = { store }>
-      <Router>
-        <Switch>
-          <Route exact path='/'>
-            <Home title='Operators-61 Car Inventory' />
-          </Route>
+    <FirebaseAppProvider firebaseConfig={firebaseConfig}>
+      <Provider store = { store }>
+        <Router>
+          <Switch>
+            <Route exact path='/'>
+              <Home title='Operators-61 Car Inventory' />
+            </Route>
 
-          <Route path='/dashboard' component={Dashboard} />
+            <Route path='/dashboard' component={Dashboard} />
 
-          <Route path='/signin' component={SignIn} />
+            <Route path='/signin' component={SignIn} />
 
-        </Switch>
-      </Router>
-    </Provider>
+          </Switch>
+        </Router>
+      </Provider>
+    </FirebaseAppProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

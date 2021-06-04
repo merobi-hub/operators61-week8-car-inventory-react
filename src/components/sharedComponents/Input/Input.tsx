@@ -10,8 +10,8 @@ interface inputType{
 export const Input = forwardRef((props:inputType, ref) => {
     return (
         <TextField
-         variant='outlined'
-         margin='normal'
+         variant="outlined"
+         margin="normal"
          inputRef={ref}
          fullWidth
          type='text'

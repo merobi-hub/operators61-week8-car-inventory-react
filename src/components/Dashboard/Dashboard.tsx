@@ -20,13 +20,13 @@ import { Drawer as MUIDrawer,
     DialogTitle,
     SvgIcon
 } from '@material-ui/core';
-import burger from '../../assets/images/icons8-menu.svg';
+// import burger from '../../assets/images/icons8-menu.svg';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import MenuIcon from '@material-ui/core/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import clsx from 'clsx';
-import {RouteComponentProps, withRouter, Switch, Route} from 'react-router-dom';
+import { RouteComponentProps, withRouter, Switch, Route } from 'react-router-dom';
 import { DataTable, CarForm } from '../../components';
 
 const drawerWidth = 240;
@@ -161,20 +161,19 @@ export const Dashboard = withRouter(( props:DashProps ) => {
                 <SvgIcon>
                   <path d="M 0 2 L 0 4 L 24 4 L 24 2 Z M 0 11 L 0 13 L 24 13 L 24 11 Z M 0 20 L 0 22 L 24 22 L 24 20 Z M 0 20 "/>
                 </SvgIcon>
-                
               </IconButton>
   
               <Button className={classes.toolbar_button} onClick={handleDialogClickOpen}>Create New Car</Button>
               {/* Beginning of Dialog Popup */}
-              <Dialog open={dialogOpen} onClose={handleDialogClickClose} aria-labelledby='form-dialog-title'>
-                  <DialogTitle id='form-dialog-title'>Add New Car</DialogTitle>
+              <Dialog open={dialogOpen} onClose={handleDialogClickClose} aria-labelledby="form-dialog-title">
+                  <DialogTitle id="form-dialog-title">Add New Car</DialogTitle>
                   <DialogContent>
                     <DialogContentText>Add New Car</DialogContentText>
                     <CarForm />
                   </DialogContent>
                   <DialogActions>
-                    <Button onClick= {handleDialogClickClose} color='primary'>Cancel</Button>
-                    <Button onClick= {handleDialogClickClose} color='primary'>Done</Button>
+                    <Button onClick= {handleDialogClickClose} color="primary">Cancel</Button>
+                    <Button onClick= {handleDialogClickClose} color="primary">Done</Button>
                   </DialogActions>
               </Dialog>
             </Toolbar>
@@ -210,7 +209,6 @@ export const Dashboard = withRouter(( props:DashProps ) => {
             })}
           >
             <div className={classes.drawerHeader} />
-    
             <DataTable />
           </main>
         </div>

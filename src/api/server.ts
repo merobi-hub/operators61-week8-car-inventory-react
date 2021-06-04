@@ -36,8 +36,8 @@ export const server_calls = {
         return await response.json()
     },
 
-    update: async (id: string, data: any = {}) => {
-        const response = await fetch(`https://car-inventory-api.herokuapp.com/api/cars`, {
+    update: async (id:string, data: any = {}) => {
+        const response = await fetch(`https://car-inventory-api.herokuapp.com/api/cars/${id}`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -51,7 +51,7 @@ export const server_calls = {
     },
 
     delete: async (id: string) => {
-        const response = await fetch(`https://car-inventory-api.herokuapp.com/api/cars`, {
+        const response = await fetch(`https://car-inventory-api.herokuapp.com/api/cars/${id}`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json',
